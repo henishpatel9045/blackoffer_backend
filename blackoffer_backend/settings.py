@@ -79,7 +79,7 @@ WSGI_APPLICATION = "blackoffer_backend.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite",
+        "ENGINE": "django.db.backends.sqlite3",
         "NAME": "blackoffer.db.sqlite",
         # "USER": "postgres",
         # "PASSWORD": "postgres",
