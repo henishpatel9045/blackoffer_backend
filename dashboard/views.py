@@ -164,6 +164,21 @@ class YearSummary(APIView):
         return Response(data=res, status=status.HTTP_200_OK)
 
 
+class UniqueData(APIView):
+    def get(self, req):
+        data = DataSourceSerializer(DataSource.objects.all(), many=True).data
+        df = pd.DataFrame(data)
+        res = {
+            "sector": df["sector"].unique().tolist(),
+            "source": df["source"].unique().tolist(),
+            "country": df["country"].unique().tolist(),
+            "pestle": df["pestle"].unique().tolist(),
+            "start_year": df["start_year"].unique().tolist(),
+            "end_year": df["end_year"].unique().tolist(),
+        }
+        return Response(data=res, status=status.HTTP_200_OK)
+
+
 def dict_filter(d):
     res = {}
     for key in d.keys():

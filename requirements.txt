@@ -2,3 +2,4 @@ django
 django-cors-headers
 djangorestframework
 psychopg2-binary
+pandas

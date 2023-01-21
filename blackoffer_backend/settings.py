@@ -79,12 +79,12 @@ WSGI_APPLICATION = "blackoffer_backend.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "blackoffer.db.sqlite",
-        # "USER": "postgres",
-        # "PASSWORD": "postgres",
-        # "HOST": "localhost",
-        # "PORT": "5432",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "blackoffer",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
